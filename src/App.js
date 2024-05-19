@@ -63,7 +63,11 @@ export default function App() {
         </Button>
       </div>
       {showSplit && (
-        <FormSplitBill selected={showSplit} onSplitBill={handleSplitBill} />
+        <FormSplitBill
+          key={showSplit?.id}
+          selected={showSplit}
+          onSplitBill={handleSplitBill}
+        />
       )}
     </div>
   );
